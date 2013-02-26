@@ -1,0 +1,1163 @@
+/*
+Theme Name: CREATIVEFLOW - Version: 1
+Description: Designed by <a href="http://themeforest.net/user/josweb">josweb</a>.
+Author: <a href="http://www.spiralpixel.com">Jo</a>
+
+01. GENERAL 
+		1. Reset
+		2. Font Face
+		3. General Styling
+			
+02. SECTIONS
+		1. Main Slider
+		2. Team Pictures
+		3. Services
+		4. Projects
+		5. Portfolio
+		6. Blog
+		7. Contact 
+		8. Tabs, Accordian and Buttons
+		9. Footer
+		
+*/
+
+/* RESET */
+html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent }
+
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('style/fonts/League_Gothic-webfont.eot');
+	src: url('style/fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('style/fonts/League_Gothic-webfont.woff') format('woff'),
+         url('style/fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('style/fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal; font-style: normal;
+	}
+
+@font-face {
+    font-family: 'OldStandardTTItalic';
+    src: url('style/fonts/OldStandard-Italic-webfont.eot');
+    src: url('OldStandard-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('style/fonts/OldStandard-Italic-webfont.woff') format('woff'),
+         url('style/fonts/OldStandard-Italic-webfont.ttf') format('truetype'),
+         url('style/fonts/OldStandard-Italic-webfont.svg#OldStandardTTItalic') format('svg');
+    font-weight: normal; font-style: normal;
+	}
+
+/***************************************************
+			GENERAL STYLING
+***************************************************/
+
+/* BODY ++++++++++++++++++++++++++++++++++++++++++++ */
+/* Change your background here */
+body { 
+	background: #333; 
+	font: 12px/1.8em "Century Gothic", Arial, Helvetica, sans-serif; color: #bbb;
+	background-image: url(style/images/bg/dark_brick_wall.png); background-repeat: repeat;
+	}
+	
+/* Wrapper - Menu and Content */	
+#wrapper{
+	width:870px; 
+	margin: 0px auto 0px auto; 
+	}
+
+/* Content Container */	
+.content { 
+	width: 870px; 
+	background: transparent;
+	margin: 0px 0px 50px auto; padding: 190px 0px 0px 0px; 
+	min-height: 500px;
+	}
+	
+/***************************************************
+			MENU
+***************************************************/
+
+#header{
+	border-bottom: 3px double #777;
+	position: fixed; top: 0px;  padding:0  0;
+	background-image: url(style/images/bg/dark_brick_wall.png); background-repeat: repeat;
+	background-position: 15px 0px; width: 960px; height: 170px; text-align: center;
+	z-index: 2000; margin-left: -45px;
+	}
+	
+.logo {margin:0px 0px 20px 0px;}
+
+/* Set the menu ul -  margin-top:120px if removing the logo  */	
+#menu ul{ margin: 0; padding: 0; position: relative; }
+#menu ul li{ list-style:none; display:inline;  }
+#menu  a{
+	font: 16px 'LeagueGothicRegular', Arial, Helvetica, sans-serif;
+	letter-spacing: 2px;
+	color: #ccc; text-shadow: 0px 1px 0px #111;
+	border-right:1px dotted #555; padding: 2px 9px;
+	text-align:center; text-transform:uppercase;
+	}
+	
+#menu .last { border-right:0px; }
+#menu ul li a:hover{  color: #eee; text-decoration:none; }
+
+#shadow {
+    background-color: transparent;
+    height: 5px;
+    width: 940px;
+    margin: 12px auto;
+    position: relative;
+    text-align: center;
+  	box-shadow-bottom: 0px 10px 10px #111;
+    -moz-box-shadow: 0px 10px 10px #111;
+    -webkit-box-shadow: 0px 10px 10px #111;
+	}
+
+
+/* LINKS ++++++++++++++++++++++++++++++++++++++++++++ */
+
+a { color: #999;text-decoration:none; outline:0;}
+a:hover { color: #ccc; }
+
+/* Hover opacity effect */
+.opacity {
+	filter:0; 
+	filter:alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	-khtml-opacity: 0.7;
+	text-decoration: none;
+	}
+
+.opacity:hover {
+	border-style:none; filter:0;
+	filter:alpha(opacity=90);
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+	-khtml-opacity: 0.9;
+	}
+
+
+/* LISTS ++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Bullet List */
+ul.bullet, ul.pointer {
+	padding: 0; display: block; overflow: hidden; margin: 0;
+	}
+
+ul.bullet li { 
+	line-height: 20px; list-style: none; 
+	background: transparent url(style/images/bullet.jpg) no-repeat;
+	background-position: 0px 8px; 
+	padding: 0px 0px 10px 18px; 
+	}
+
+/* Arrows List */
+ul.pointer li {
+	line-height: 20px; list-style: none; display: block; 
+	background: transparent url(style/images/list-arrow.png) no-repeat; 
+	background-position: -4px 2px;  padding: 0px 0px 10px 18px;
+	}
+	
+	
+/* Star List */
+ul.star li {
+	line-height: 20px; list-style: none; display: block; 
+	background: transparent url(style/images/star.png) no-repeat; 
+	background-position: -3px 2px;  padding: 0px 0px 10px 18px;
+	}
+
+/* Ordered List */
+ol {
+	font: 14px"OldStandardTTItalic", Arial, Helvetica, sans-serif;
+	color: #999; padding: 0px 0px 0px 18px;
+	}
+
+ol p { font: 12px/18px "Century Gothic", Arial, Helvetica, sans-serif; color: #bbb;}
+
+
+/* QUOTES - DROP CAP ++++++++++++++++++++++++++++++++++++++++++++ */
+
+.dropcap {
+	font: 70px 'LeagueGothicRegular', Arial, Helvetica, sans-serif;
+	color: #cfba58;
+	display: block; 
+	float: left;  line-height: 1;
+	margin: 0px 10px -6px 0;
+	}
+
+	
+/* Circle Dropcap */	
+.dropcap2{
+	font: 45px 'LeagueGothicRegular', Arial, Helvetica, sans-serif;
+	color: #ddd;
+	display:block;
+	float:left;text-shadow: 0 -1px 1px #777; 
+	line-height:50px;
+	background-color: #cfba58;
+	width:50px;
+	text-align: center;
+	margin:6px 10px 0px 0;
+	-moz-border-radius: 50px;
+	-webkit-border-radius:50px;
+	border-radius:50px;
+	}
+	
+/* Block Quote */	
+blockquote { 
+	color: #999; 
+	font-size: 15px; 
+	font-style: italic;  
+	margin: 20px 0px 20px 0px; 
+	padding: 15px; 
+	border-left: 5px solid #cfba58;
+	}
+	blockquote p { margin:0px; }
+	blockquote span { display:block; font-size: 12px; line-height: 20px; color: #555; float: right; }	
+
+/* Pull Quote */
+.pullleft, .pullright { 
+	float: right; 
+	font-size: 15px; 
+	font-style: italic; 
+	color: #999; 
+	width: 33%; 
+	margin: 20px 0px 15px 20px; 
+	padding: 20px; 
+	border-left: 5px solid #cfba58;
+	}
+.pullleft { float: left; margin-left: 0px; margin-right: 10px; }
+
+/* Quote */
+.quote{
+	text-align:left;
+	padding:0px 0px 30px 0px;
+	margin:0px;
+	position:relative;
+	}
+
+.quote span{
+	text-indent: 35px;
+	display: block;
+	}
+
+span.quoteblock{
+	font: 80px/30px "OldStandardTTItalic", Arial, Helvetica, sans-serif;
+	color:  #cfba58;
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	text-indent: -10px;
+	}
+
+/* Quote 2 */
+.quote2{
+	text-align:left;
+	padding:0px 0px 30px 0px;
+	margin:0px;
+	position:relative;
+	}
+
+.quote2 span{
+	text-indent: 40px;
+	display: block;
+	}
+
+span.quoteblock2{
+	font: 100px/40px 'LeagueGothicRegular', Arial, Helvetica, sans-serif;
+	letter-spacing: -1px;
+	color:  #cfba58;
+	position: absolute;
+	top: 12px;
+	left: 0px;
+	text-indent: 0px;
+	}
+
+/* quote signature */
+.quote em{	float:left;margin-top:10px;margin-left:-35px;
+	color: #777;
+	font-size:12px;
+	}
+	
+/* Highlight */	
+.highlight { padding: 2px 5px; background-color: #bbb; color: #333; }
+
+
+/* IMAGE STYLES ++++++++++++++++++++++++++++++++++++++++++++ */
+img.left {
+	border: 1px solid #999; padding: 3px;
+	-moz-box-shadow: 0 1px 3px #222; 
+	-webkit-box-shadow: 0 1px 3px #222; 
+	-moz-border-radius: 5px; -webkit-border-radius:5px;
+	border-radius: 5px; 
+	background-color: #777; 
+	float: left; margin: 5px 15px 5px 0px;
+	}
+
+img.right {
+	border: 1px solid #999; padding:3px;
+	-moz-box-shadow: 0 1px 3px #222; 
+	-webkit-box-shadow: 0 1px 3px #222; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px; 
+	background-color: #777;
+ 	float: right; margin: 5px 0px 5px 15px;
+	}
+	
+
+/***************************************************
+			TYPOGRAPHY
+***************************************************/
+
+/* Page Headings */
+.content h1 {
+	margin: 28px auto 20px auto;
+	font: 50px/40px 'LeagueGothicRegular', Arial, Helvetica, sans-serif;
+	letter-spacing: -1px;
+	text-shadow: 0px 1px 1px #444;
+	background: transparent;
+	color: #cfba58; text-align:center;
+	}
+	
+/* Intro Text */
+.content h2 { text-align:center;
+	margin: 15px 0px 25px 0px;
+ 	font: 24px/30px "OldStandardTTItalic", Arial, Helvetica, sans-serif;
+	color: #f0efde;
+	}
+
+h3,h4,h5,h6 { 
+	font-family:  'LeagueGothicRegular', Arial, Helvetica, sans-serif;
+ 	color: #f0efde;
+	text-transform: uppercase; 
+	font-weight: normal;
+	margin-bottom: 20px; 
+	}
+
+h3{ font-size: 26px; }
+h4{ font-size: 22px; }
+h5{ font-size: 16px;letter-spacing: 1px; }
+h6{ font-size: 14px;letter-spacing: 1px; }
+
+
+/***************************************************
+			COLUMNS
+***************************************************/
+
+/* Two Columns */
+.col2{
+	float: left;
+	position: relative;
+	width: 420px;
+	margin: 0px 30px 25px 0px;
+	}
+	
+/* Three Columns */
+.col3{
+	float: left;
+	position: relative;
+	width: 270px;
+	margin: 0px 30px 25px 0px;
+	}
+	
+/* Four Columns */
+.col4{
+	float: left;
+	position: relative;
+	width: 195px;
+	margin: 0px 30px 25px 0px;
+	}
+
+.last {
+	margin-right: 0px;
+	}
+
+/***************************************************
+			SECTIONS
+***************************************************/
+
+/* 1: MAIN SLIDER */
+#awOnePageButton .view-slide { display: none;}
+
+/* Assign the correct showcase height to prevent loading jumps in IE */
+.showcase-load { height: 470px; /* Same as showcase javascript option */ overflow: hidden; }
+
+/* Container when content is shown as one page */
+.showcase-onepage { /**/ }
+
+/* Container when content is shown in slider */
+.showcase { position: relative; margin: auto; padding-top:10px; padding-bottom:20px; }
+
+.showcase-content-container {
+	-moz-box-shadow: 0 1px 3px #222; 
+	-webkit-box-shadow: 0 1px 3px #222; 
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px; 
+	background-color: #000;
+	}
+	
+/* Navigation arrows */
+.showcase-arrow-previous, .showcase-arrow-next {
+	position: absolute;
+	background: url('style/images/arrows.png');
+	width: 33px; height: 33px; top: 220px; cursor: pointer;
+	}
+	
+.showcase-arrow-previous { left: -60px; }
+.showcase-arrow-previous:hover { background-position: 0px -34px; }
+.showcase-arrow-next { right: -56px; background-position: -34px 0; }
+.showcase-arrow-next:hover { background-position: -34px -34px; }
+	
+/* Content */
+.showcase-content { background-color: #000; text-align: center; }
+.showcase-content-wrapper {
+	text-align: center;
+	height: 470px; width: 870px;
+	display: table-cell; vertical-align: middle;
+	}
+
+/* Styling the caption */
+.showcase-caption {
+	color: #000;
+	padding: 8px 15px;
+	text-align: left;
+	position: absolute;
+	bottom: 10px; left: 10px; right: 10px;
+	display: none;
+	background-image: url(style/images/white-opacity-80.png);
+	}
+
+.showcase-caption a { color: #555; }
+.showcase-caption a:hover { color: #777; }
+.showcase-onepage .showcase-content { margin-bottom: 0px; }
+	
+/* Button Wrapper */
+.showcase-button-wrapper { clear: both; margin-top: 10px; text-align: center; }
+.showcase-button-wrapper span {
+	margin-right: 3px;
+	padding: 2px 5px 0px 5px;
+	cursor: pointer;
+	font-size: 12px;
+	color: #444444;
+	}
+	
+.showcase-button-wrapper span.active { color: #bbb; }
+	
+
+/* 2: THE TEAM - PICTURES */
+
+.author-block {
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:270px;
+	padding-right:30px;
+	}
+	
+.last { padding-right:0px;}
+
+.author-block h3 { 
+	margin: 15px 0px 2px 0px;
+	font:25px/35px "LeagueGothicRegular", Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	color: #cfba58;
+	border-bottom:1px solid #777;
+	}
+	
+.mosaic-backdrop { display:none; position:absolute; top:0; height:100%; width:100%; background:#111; }
+.mosaic-overlay { display:none; z-index:5; position:absolute; width:100%; height:100%; background:#111; }
+
+.fade .mosaic-overlay {
+	opacity:0; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)"; filter:alpha(opacity=00);
+	background:url(style/images/bg-black.png);
+	}
+
+.author-block h4 { 
+	margin: 0px 0px 30px 0px;
+	padding-top:5px;
+ 	font:12px "Century Gothic", Arial, Helvetica, sans-serif;
+	color: #f0efde;
+	}
+	
+.mosaic-block {
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:250px;
+	height:220px;
+	margin:0px 0px 10px 0px;
+	background:#777;
+	border:1px solid #777;-moz-border-radius: 3px; -webkit-border-radius:3px;
+	border-radius: 3px;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	}
+
+.mosaic-backdrop {display:none; position:absolute; top:0; height:100%; width:100%; background:#111; }
+.mosaic-overlay { display:none; z-index:5; position:absolute; width:100%; height:100%; background:#111; }
+
+.mosaic-block2 {
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:245px;
+	height:184px;
+	margin:0px 20px 0px 0px;
+	background:#777;
+	}
+
+.circle .mosaic-overlay {
+	background:url(style/images/hover-magnify.png) no-repeat center center; opacity:0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)"; filter:alpha(opacity=00); display:none;
+	}
+	
+/* Hover Text */
+.mosaic-block  h4{
+	margin: 25px 20px 25px 20px; text-align:center; text-transform:none;
+	font: normal 18px/30px "OldStandardTTItalic", Arial, Helvetica, sans-serif;
+	color: #fff;
+	}
+	
+	
+/* 3: SERVICES */
+
+/********************
+ * SERVICE ICONS *
+ ********************/
+
+#service-icons{ 
+	float: left;
+	margin: 0px 0px 0px 0px;
+	list-style: none;
+	}
+	
+#service-icons li {
+	width: 217px;
+	list-style: none;
+	float: left;
+	text-align: center;
+	line-height: 20px;
+	padding: 120px 0 0px 0;
+	}
+	
+#inspiration { background-image: url(style/images/icons/green_inspiration.png) ;
+  background-repeat: no-repeat; background-position: 60px 0;}
+
+#ribbon { background-image: url(style/images/icons/tan_ribbon.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#microscope {  background-image: url(style/images/icons/blue_microscope.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#clock {  background-image: url(style/images/icons/brown_clock.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#tools { background-image: url(style/images/icons/tan_tools.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#design {background-image: url(style/images/icons/blue_design.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#applications { background-image: url(style/images/icons/brown_applications.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#music {  background-image: url(style/images/icons/green_music.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#camera {background-image: url(style/images/icons/blue_camera.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#gears { background-image: url(style/images/icons/brown_gears.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#palette { background-image: url(style/images/icons/green_palette.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#scissors { background-image: url(style/images/icons/tan_scissors.png) ;
+  background-repeat: no-repeat; background-position: 60px 0; }
+
+#service-icons li h3 {
+  font-family: LeagueGothicRegular; font-size: 20px; color: #f0efde;
+  text-transform: uppercase;font-weight: normal;margin: 0px 0px; }
+
+/* service toggle button */
+.panel_button {
+	margin: 0px auto 20px auto;
+	position: relative;
+	background: url(images/panel_button.png);
+	text-align:center;
+	cursor: pointer;
+	}
+.panel_button img { position: relative; border: none; }
+#toppanel { width: 870px; }
+
+#panel {
+	width: 870px;
+	position: relative;
+	top: 1px;
+	height: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	text-align: left;
+	}
+	
+#panel_contents { height: 100%; width: 870px; }
+#panel h2 { text-align: center; letter-spacing: 1px; line-height: 39px; font-size: 18px; font-weight: normal; margin-bottom: 30px; }
+	
+/* bracket */
+.bracket{ width: 400px; padding: 0 10px; margin: 20px auto; font-size: 16px; text-align: center; position: relative; }
+.bracket span, .blogbracket span{position: absolute; top: 0;}
+.bracket span.left { left: 0px; top: 0px; color: #cfba58; font-size: 80px;}
+.bracket span.right { right: 0px; top: 0px; color: #cfba58; font-size: 80px; }
+.bracket em {color: #cfba58;}
+
+
+
+/********************
+ * MINI CAROUSEL *
+ ********************/
+
+.jcarousel-container { margin:20px 0px 40px -5px; clear:both; }
+.jcarousel-skin-tango .jcarousel-direction-rtl { direction: rtl;}
+.jcarousel-skin-tango .jcarousel-container-horizontal { padding: 0px 32px; }
+.jcarousel-skin-tango .jcarousel-clip { overflow: hidden; }
+.jcarousel-skin-tango .jcarousel-clip-horizontal { }
+
+.jcarousel-skin-tango .jcarousel-item {
+	width:75px; height:75px;
+	border:1px solid #999; padding:2px;
+	-moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; box-shadow: 0 1px 3px #999; 
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	border-radius:5px; background-color: #777;
+	}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal { margin: 0px 8px 0px 3px; }
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal { margin: 0px 0px; }
+.jcarousel-skin-tango .jcarousel-item-placeholder { background: #fff;  color: #000; }
+
+/* Carouel Buttons */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+	position: absolute;
+    top: 20px;
+    left: 400px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(style/images/next-horizontal.png) no-repeat 0 0;
+	}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 15px;
+    right: auto;
+    background-image: url(style/images/prev-horizontal.png);
+	}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-horizontal:focus { background-position: -32px 0; }
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent url(style/images/prev-horizontal.png) no-repeat 0 0;
+	}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+	background-image: url(style/images/next-horizontal.png); left: auto; right: 5px;
+	}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin-tango .jcarousel-prev-horizontal:focus { background-position: -32px 0;}
+
+/* 4: PROJECTS */
+
+/********************
+ * FEATURE CAROUSEL *
+ ********************/
+
+#carousel-container {position:relative; width:870px; }
+#carousel {
+  	height:280px;
+  	width:870px;
+  	background-color:transparent;
+  	position:relative;
+  	margin-bottom:0.5em;
+  	font-size:12px;
+  	font-family: Arial;
+	}
+	
+#carousel .carousel-image { border:0; display:block; }
+#carousel .carousel-feature {
+  	position:absolute;
+  	top:-1000px;
+  	left:-1000px;
+  	border:2px solid #5d5d5d;
+  	cursor:pointer;
+	}
+	
+#carousel .carousel-feature .carousel-caption { position:absolute; bottom:0; width:100%; background-color:#000;}
+#carousel .carousel-feature .carousel-caption p { margin:0; padding:5px; font-weight:bold; font-size:12px; color:white;}
+#carousel .tracker-summation-container { display:none; }
+#carousel .tracker-individual-container { display:none; }
+#carousel .tracker-individual-container li { list-style:none; }
+#carousel .tracker-individual-container .tracker-individual-blip { display:none; }
+#carousel .tracker-individual-container .tracker-individual-blip-selected { display:none; }
+#carousel-left { position:absolute; bottom:33px; left:170px; cursor:pointer; }
+#carousel-right { position:absolute; bottom:33px; right:170px; cursor:pointer; }
+
+/********************
+ * VERTICAL PROJECTS *
+ ********************/
+
+.vertical {  
+	/* required settings */
+	position:relative;
+	overflow:hidden;	
+	/* vertical scrollers have typically larger height than width */	
+	height: 665px;	 
+	width: 870px;
+	border-top:1px solid #555;	
+	}
+	
+/* root element for scrollable items */
+.items {	
+	position:absolute;
+	/* this time we have very large space for height */	
+	height:20000em;	
+	margin: 0px;
+	}
+	
+/* single scrollable item */
+.item {
+	border-bottom:1px solid #444;
+	margin:10px 0;
+	padding:15px;
+	font-size:12px;
+	height:180px;
+	}
+	
+/* elements inside single item */
+.item img {
+	float:left;
+	margin-right:20px;
+	height:180px;-moz-border-radius: 3px; -webkit-border-radius:3px;
+	border-radius: 3px;
+	width:240px;border:2px solid #777;
+	-moz-box-shadow: 0 0 5px #222; -webkit-box-shadow: 0 0 5px #222; box-shadow: 0 0 5px #222;
+	}
+.item h3 { margin:0 0 5px 0; font-size:16px; color: #f0efde;letter-spacing:1px; font-weight:normal; }
+
+/* the action buttons above the scrollable */
+#actions { width:870px; margin:30px 0 10px 0;}
+#actions a { font-size:11px;cursor:pointer; }
+#actions a:hover {text-decoration:none; }
+.disabled { visibility:hidden;		}
+.next {float:right;}	
+
+/* 5: PORTFOLIO */
+
+/********************
+ * PORTFOLIO *
+ ********************/
+
+#portfolio {float: left; width: 870px;}
+#portfolio ul {margin-top: 15px;}
+#portfolio ul li {margin: 10px 0px 5px 0px; list-style-type: none; position: relative; float: left;}
+#portfolio ul li.one, #portfolio ul img:focus { 
+	background-image: url(images/thumb-hover-zoom-three.png); background-repeat: no-repeat;
+	background-position: 9px 9px; 
+	width: 200px;
+	margin-right:90px; 
+	}
+	
+.portimg { 
+	display: block;
+	border: 1px solid #999; padding: 3px;
+	-moz-box-shadow: 0 1px 3px #222; 
+	-webkit-box-shadow: 0 1px 3px #222;
+	box-shadow: 0 1px 3px #222
+	-moz-border-radius: 5px;
+	border-radius:5px;
+	background-color: #777;
+	float: left;
+	}
+
+#portfolio h3 { display: block; padding: 0px 10px 0px 10px; font-size:20px; }
+#portfolio p { display: block; padding: 0px 10px 10px 10px; margin-top:-10px;}
+
+.portfolio-thumbnail{
+	position:absolute;
+	width:250px; height:150px;
+ 	z-index:10; opacity: 0.86; left: 3px; top: 4px;
+	padding: 0px 10px 10px 10px; background-color: #000;
+	}
+
+
+/***************************************************
+		    PORTFOLIO FILTER
+***************************************************/
+
+#portfolio-filter{ text-align:center;margin-left:0px;margin-top:0px; padding: 0!important; }
+
+#portfolio-filter li{
+	padding: 1px 0 0 0;
+	background: none;
+	margin: 0 4px 0 0;	
+	display: inline-block;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+#portfolio-filter li a{
+	font-size: 11px;
+	text-transform: uppercase;
+	background: #888;	
+	display: inline-block;	
+	color: #fff!important;
+	text-decoration: none;
+	position: relative;
+	cursor: pointer;	
+	padding: 0 6px 0 !important;	
+	border: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 20px;			
+	}
+
+#portfolio-filter a:hover { background: #6a6a6a; }
+#portfolio-filter li a.current{ background: #cfba58; }
+
+
+/* 6: BLOG */
+
+#blog .col4{
+	float: left;
+	position: relative;
+	border-right: 2px dotted #444;
+	padding: 0px 10px 0px 0px;
+	width: 195px;
+	height: 400px;
+	margin: 0px 14px 25px 0px;
+	}
+	
+#blog .last{ border-right:0px dotted; margin-right: 0px; }
+
+#blog h4 a{ font-size:16px; letter-spacing:1px; color: #f0efde; }
+#blog h4 a:hover{ color: #ccc;}
+
+#blog h5{ margin:-12px 0px 20px 0px; font-size:14px; line-height:1px; letter-spacing:1px; color: #999;}
+#blog h6{ margin: 20px 0px 20px 0px; font: 12px"OldStandardTTItalic", Arial, Helvetica, sans-serif; color: #999; text-transform:none; letter-spacing:1px; }
+
+img.blog-left{
+	border:1px solid #777;
+	-moz-box-shadow: 0 0 5px #222;
+	-webkit-box-shadow: 0 0 5px #222;
+	box-shadow: 0 0 5px #222;
+	float: left; margin: 5px 90px 10px 0px;
+	clear:both;
+	}
+
+/* bracket */
+.blogbracket{ width: 250px; padding: 0 10px; margin: 20px auto; font-size: 16px; text-align: center; position: relative; }
+.blogbracket span.left { left: 0px;top:-5px;color: #cfba58; font-size:80px;}
+.blogbracket span.right { right: 0px;top:-5px;color: #cfba58; font-size: 80px; }
+.blogbracket em{color: #bbb; }
+
+
+/* 7:CONTACT */
+
+/********************
+ * SOCIAL ICONS *
+ ********************/
+
+#social  { margin: 20px 0px 20px 0px; width:420px; padding: 0; list-style-type: none; float:left; }
+#social ul{ display:inline;padding: 0px 0px;  overflow: hidden; margin-left:-5px; }
+#social li { display: inline; list-style-type: none; padding-right: 18px; }
+#social  a { filter:0; filter:alpha(opacity=100);  -moz-opacity:1.0; -khtml-opacity:1.0; opacity:1.0;text-decoration: none; }
+#social  a:hover {border-style:none; filter:90; filter:alpha(opacity=90); -moz-opacity:0.9;-khtml-opacity:0.9;opacity:0.9; }
+
+/********************
+ * CONTACT DETAILS *
+ ********************/
+
+.contact-list {
+	float: left;
+	width: 180px; background-color: transparent;
+	margin: 0px 30px 0px 0px;
+	}
+
+ul.contact-list { padding: 0px 0px; display: block; overflow: hidden; margin-left:-5px;}
+
+.contact-list li { line-height: 20px; list-style: none;  display: block; padding-bottom: 12px; }
+
+.home{background-image:url('style/images/icons/home.png');background-repeat: no-repeat; padding-left: 35px;background-position: 0px -2px; }
+
+.phone{background-image:url('style/images/icons/phone.png'); background-repeat: no-repeat; padding-left: 35px; background-position: 0px -5px; }
+
+.e_mail{background-image:url('style/images/icons/email.png'); background-repeat: no-repeat; padding-left: 35px; background-position: 0px -2px; }
+
+.address{background-image:url('style/images/icons/address.png'); background-repeat: no-repeat; padding-left: 35px; background-position: 0px -5px; }			
+
+/********************
+ * TWITTER *
+ ********************/
+
+#twitter-wrapper {font: 12px/1.8em "Century Gothic", Arial, Helvetica, sans-serif; float: left; clear: both; margin: 0px 0px; position: relative; }
+#tweet { padding: 0px 0; background: transparent url(style/images/icons/twitter-bird.png) no-repeat -2px 0px; min-height: 40px; }
+.tweeter { width:370px; background: none; padding: 5px 0px 5px 30px; }
+#tweet ul  padding: 0; margin: 0; }
+#tweet ul li {  background: none; padding: 0px 0px; }
+#tweet li { list-style-type: none; padding: 0px 0px 0px 30px;  }
+#tweet ul li a { color: #999; text-decoration: none; border: none;}
+#tweet ul li a:hover { text-decoration: underline; }
+.username { font: italic normal 11px "Century Gothic", Arial, Helvetica, sans-serif; background: transparent; float:right;padding: 5px 20px 5px 0px; }
+.username a { color: #888;  }
+
+/********************
+ * CONTACT FORM *
+ ********************/
+
+#contact_form {margin-top: 0px;float: left; padding-top: 0px;padding-left: 0px; width: 405px; }
+.success { font: 20px/30px "OldStandardTTItalic", Arial, Helvetica, sans-serif; color: #999;}
+.error { color:#999; font-size: 11px; position: relative; float:right; }
+#contact_form ul {margin: 0;}
+
+#contact_form  li {
+	float: left;
+	margin-left:0px; margin-bottom:10px; 
+	position: relative; 
+	height:45px;
+	color: #888;
+	list-style-type: none;
+	}
+	
+#contact_form label { width: 400px; height: 23px; display: block; }
+#contact_form  li.textarea { height:130px; }
+#contact_form  li.button_form { float: left; margin-bottom:8px; position: relative; height: 35px; list-style-type: none; }
+
+#contact_form input, textarea {
+	width: 405px;
+ 	margin-bottom: 4px;
+ 	background-color: #ededed; color: #666666;
+	border:1px solid  #FFFFFF;
+	padding: 6px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;	
+	}
+	
+#contact_form textarea {
+	height: 82px; width: 405px;
+	font-family: "Century Gothic", Arial, Helvetica, sans-serif; font-size: 12px;
+	padding: 6px; margin-bottom: 15px;
+	}
+	
+#contact_form input:focus, textarea:focus {
+	background-color: #DBDBDB; color: #333333;
+	border:1px solid  #fff;
+	}
+	
+#contact_form input.submit {
+	margin: 5px 10px 0px 0px;
+	float:left;
+ 	 width: 100px; 
+	padding: 5px 0px 6px 0px; 
+	background-color: #cfba58;
+  	border:none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	line-height: 1;
+	text-align: center;
+	text-shadow: 0px 1px 0px #666;
+	}
+#contact_form .required { color: #cfba58; font-size: 0.9em; }
+
+/********************
+ * MAP *
+ ********************/
+
+#map { float:left;margin:5px 0px 22px 0px;
+border:3px solid; width:414px; height:170px; }
+			
+		
+/* 8: TABS AND ACCORDIAN */
+
+/********************
+ * TABS *
+ ********************/
+
+/* root element for tabs  */
+ul.css-tabs {  
+	margin:0 !important; 
+	padding:0;
+	height:30px;
+	border-bottom:1px solid #777;	 	
+	}
+	
+/* single tab */
+ul.css-tabs li {  
+	float:left;	 
+	padding:0; 
+	margin:0;  
+	list-style-type:none;	
+	}
+	
+/* link inside the tab. uses a background image */
+ul.css-tabs a { 
+	float:left;
+	font-size:12px;
+	display:block;
+	padding:5px 20px;	
+	text-decoration:none;
+	height:18px;
+	background-color:#555;
+	color:#bbb;
+	margin-right:2px;
+	position:relative;
+	top:2px;	
+	outline:0;
+	-moz-border-radius:4px 4px 0 0;	
+	}
+	
+ul.css-tabs a:hover {
+	background-color:#555;	
+	color:#eee;
+	}
+	
+/* selected tab */
+ul.css-tabs a.current {
+	background-color: #cfba58;
+	color:#fff;
+	text-shadow: 0px 1px 0px #666;
+	cursor:default;
+	}
+	
+/* tab pane */
+.css-panes div {
+	display:none;
+	border-width:0 1px 1px 1px;
+	padding:5px 2px;
+	background-color:transparent;	
+	}
+	
+
+/********************
+ * ACCORDIAN *
+********************/
+
+/* root element for accordion. decorated with rounded borders and gradient background image */
+#accordion {
+	background:#333;
+	width: 420px;
+	border:1px solid #333;
+	}
+	
+/* accordion header */
+#accordion h2 {
+	font-family:  'LeagueGothicRegular', Arial, Helvetica, sans-serif; text-transform:uppercase; font-weight:normal; 
+	background:#333;
+	margin:0;
+	padding:3px 15px;
+	font-size:18px;
+	font-weight:normal;
+	border:1px solid #999;
+	cursor:pointer;		
+	}
+
+/* currently active header */
+#accordion h2.current {
+	cursor:default;
+	background-color: #cfba58;
+	text-shadow: 0 1px 0px #666;
+	border-bottom:1px solid #666;
+	}
+	
+/* accordion pane */
+#accordion .pane {
+	border:1px solid #999;
+	display:none;
+	padding:15px;
+	background-color:#555;
+	font-size:12px;
+	color:#ccc;
+	}
+	
+/* a title inside pane */
+#accordion .pane h3 {
+	font-weight:normal;
+	margin:0 0 -5px 0;
+	font-size:15px;
+	letter-spacing:1px;
+	font: 12px/1.8em "Century Gothic", Arial, Helvetica, sans-serif;
+	}
+	
+/********************
+ * BUTTONS *
+********************/
+.button {
+	background: #222 url(style/images/overlay-button.png) repeat-x 0 0;
+	display: inline-block; padding: 7px 10px 8px;
+	color: #fff !important; font-size: 11px; font-weight: bold; line-height: 1;
+	text-decoration: none;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative; cursor: pointer;overflow: visible; width: auto;
+	}
+	
+button::-moz-focus-inner { border: 0; padding: 0; }
+.button:hover { background-color: #111; color: #fff; }
+.button:active { -webkit-transform: translateY(1px); -moz-transform: translateY(1px); }
+
+	
+/* Colours for buttons */
+	.green.button { background-color: #9dbb40; }
+	.green.button:hover { background-color: #749a02; }
+	
+	.blue.button { background-color: #86b8b1; }
+	.blue.button:hover { background-color: #007d9a; }
+	
+	.red.button { background-color: #db2c2c; }
+	.red.button:hover { background-color: #872300; }
+	
+	.pink.button{ background-color: #cc2277; }
+	.pink.button:hover { background-color: #a6125c; }
+	
+	.orange.button { background-color: #e25d33; }
+	.orange.button:hover { background-color: #d45500; }
+	
+	.yellow.button { background-color: #cfba58; }
+	.yellow.button:hover { background-color: #b19b32; }
+	
+	.olive.button { background-color: #898a75; }
+	.olive.button:hover { background-color: #6c6e48; }
+	
+	.white.button { background-color: #fff; border: 1px solid #ccc;
+	color: #666 !important; font-weight: normal; text-shadow: 0 1px 1px rgba(255,255,255,1); }
+	.white.button:hover { background-color: #eee; }
+	
+	.grey.button { background-color: #666; }
+	.grey.button:hover { background-color: #555; }
+	
+
+/* 9: FOOTER */
+			
+#footer { 
+	height:90px; margin-top: 45px; 
+	padding-top:20px; text-align: center; 
+	font: 11px/1.3em "Century Gothic", Arial, Helvetica, sans-serif; clear: both; 
+	}	
+	
+.links { font-size: 1em;  color: #555;}
+.links a { font-size: 1em;  color: #888;}
+.links   a:hover { color: #cfba58;}
+.clear{ clear:both; }
+.content br { clear: both; }
