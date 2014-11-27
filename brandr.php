@@ -37,7 +37,7 @@ class Brandr {
     $exec = 'nice -n 19 convert -limit area 64 '.escapeshellarg($image_path).' -resize 300x300\> '.escapeshellarg($image_path);
     exec($exec);
 
-    //$exec = 'pngnq -n 256 '.$image_path;
+    //$exec = 'pngnq -n 256 '.escapeshellarg($image_path);
     //exec($exec);
 
     //unlink($image_path);
