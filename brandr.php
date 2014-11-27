@@ -1,8 +1,7 @@
 <?php
-ini_set('display_errors', TRUE);
 class Brandr {
   function __construct() {
-    $this->root_path = '/var/www/vhosts/landr.co/httpdocs/brandr/';
+    $this->root_path = dirname (__FILE__) . '/';
   }
 
   function get_image($url) {
@@ -25,9 +24,9 @@ class Brandr {
       //size is in bytes
       if($size < 700000) {
         $data = file_get_contents($url);
-        $path = 'images/'.uniqid().'.png';
+        $path = $this->root_path.'images/'.uniqid().'.png';
         file_put_contents($path, $data);
-        return $this->root_path.$path;
+        return $path;
       }
     }
     return FALSE;
