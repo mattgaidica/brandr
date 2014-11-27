@@ -1,11 +1,10 @@
 <?php
-ini_set('display_errors', TRUE);
 class Imagetheme {
   function __construct() {
-    $this->root_path = '/var/www/vhosts/landr.co/httpdocs/brandr/';
+    $this->root_path = dirname (__FILE__) . '/';
   }
 
-	function get_border_color($path) {
+  function get_border_color($path) {
     $image_info = getimagesize($path);
     $image = imagecreatefrompng($path);
     $width = $image_info[0];
@@ -88,7 +87,7 @@ class Imagetheme {
     $height = $image_info[1];
     
     $negative_path = $this->root_path.'images/tmp-negative-'.uniqid().'.png';
-    $exec = "convert $path -define convolve:scale='!' -define morphology:compose=Lighten -morphology Convolve  'Sobel:>' $negative_path";
+    $exec = "convert ".escapeshellarg($path)." -define convolve:scale='!' -define morphology:compose=Lighten -morphology Convolve  'Sobel:>' ".escapeshellarg($negative_path);
     exec($exec);
     $negative = imagecreatefrompng($negative_path);
     unlink($negative_path);
