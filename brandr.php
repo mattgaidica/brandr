@@ -1,8 +1,7 @@
 <?php
-ini_set('display_errors', TRUE);
 class Brandr {
   function __construct() {
-    $this->root_path = '/var/www/vhosts/landr.co/httpdocs/brandr/';
+    $this->root_path = dirname (__FILE__) . '/';
   }
 
   function get_image($url) {
@@ -25,9 +24,9 @@ class Brandr {
       //size is in bytes
       if($size < 700000) {
         $data = file_get_contents($url);
-        $path = 'images/'.uniqid().'.png';
+        $path = $this->root_path.'images/'.uniqid().'.png';
         file_put_contents($path, $data);
-        return $this->root_path.$path;
+        return $path;
       }
     }
     return FALSE;
@@ -35,10 +34,10 @@ class Brandr {
 
   function format_image($image_path) {
     //trim
-    $exec = 'nice -n 19 convert -limit area 64 '.$image_path.' -resize 300x300\> '.$image_path;
+    $exec = 'nice -n 19 convert -limit area 64 '.escapeshellarg($image_path).' -resize 300x300\> '.escapeshellarg($image_path);
     exec($exec);
 
-    //$exec = 'pngnq -n 256 '.$image_path;
+    //$exec = 'pngnq -n 256 '.escapeshellarg($image_path);
     //exec($exec);
 
     //unlink($image_path);
@@ -52,9 +51,9 @@ class Brandr {
     }
     if($color === '') {
       //transparent
-      $exec = 'nice -n 19 convert -limit area 64 '.$save.' -trim +repage '.$save;
+      $exec = 'nice -n 19 convert -limit area 64 '.escapeshellarg($save).' -trim +repage '.escapeshellarg($save);
     } else {
-      $exec = 'nice -n 19 convert -limit area 64 '.$save.' -bordercolor "#'.$color.'" -border 1x1 -fuzz 10% -trim +repage '.$save;
+      $exec = 'nice -n 19 convert -limit area 64 '.escapeshellarg($save).' -bordercolor '.escapeshellarg('#'.$color).' -border 1x1 -fuzz 10% -trim +repage '.escapeshellarg($save);
     }
     exec($exec);
     return TRUE;
